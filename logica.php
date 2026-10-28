@@ -27,30 +27,35 @@ $refugo = $pecas_refugadas / $pecas_produzidas * 100;
 $meta_atingida = $pecas_boas / $maquinas_metas [$maquina] * 100;
 $tempo_produtivo = (480 - $minutos_parada) / 480 * 100;
 
+// Não deixando a meta ultrapassar de 100%
+if ($meta_atingida > 100){
+    $meta_atingida = 100;
+}
+
 // Regras que o sistema precisa ter
 
 // Regra de Refugo
 if ($refugo > 5){
-    echo "Qualidade baixa! <br>";
+    $get_refugo =  "Atenção a qualidade está baixa! <br>";
 }
 else{
-    echo "Qualidade Padrão <br>";
+    $get_refugo =  "A qualidade está dentro do padrão <br>";
 }
 
 // Máquina parada
 if ($tempo_produtivo <= 60){
-    echo "Máquina necessita manutenção <br>";
+    $get_tempo = "Máquina necessita manutenção <br>";
 }
 else {
-    echo "Funcionamento padrão <br>"; 
+    $get_tempo = "Funcionamento padrão <br>"; 
 }
 
 // Meta alcançada
-if ($meta_atingida == $maquinas_metas [$maquina]){
-    return "A meta de peças foi atingida!! <br>";
+if ($pecas_boas >= $maquinas_metas [$maquina]){
+    $get_meta = "A meta de peças foi atingida!! <br>";
 }
 else{
-    return "Falta de produção <br>";
+    $get_meta = "A meta não foi atingida, falta de produção <br>";
 }
 
 // funções do sistema
@@ -59,11 +64,11 @@ function buscaMeta (){
     return $maquinas_metas [$maquina];
 }
 
-function percentualProdução ($pecas_boas, $pecas_produzidas){
-    $percentual_pecas = ($pecas_boas - $pecas_produzidas) / $pecas_produzidas;
-    echo $percentual_pecas. "%";
+function percentual (){
+    return "Percentual de meta: $get_meta, Percentual de refugo: $get_refugo , Percentual de tempo: $get_tempo";
 }
 
 
-require_once "view_relatorio.php";
+
+require "view_relatorio.php";
 ?>

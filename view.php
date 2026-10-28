@@ -38,7 +38,7 @@
                 <input type = "number" name = "minutos_parada" min = "0" max = "480">
                 <br><br>
                 <button type = "submit"> Registar </button>
-                <button type = "reset"> Limpar </button>
+                <button class = "btn-voltar" type = "reset"> Limpar </button>
                 </form>
         </div>
 </body>

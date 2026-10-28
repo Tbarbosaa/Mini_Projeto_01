@@ -1,16 +1,6 @@
-*{
-    margin: 0; 
-    padding: 0; 
-    font-family: Helvetica;
-}
-
-#turno{
-    text-align: center;
-    margin: 8px;
-    padding: 20px;
-    width: 450px;
-    height: 450px;
-    background-color: rgb(168, 200, 226);
-    border-radius: 19%;
+#turno {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0fa; 
+    margin: 20px;
 }
 
