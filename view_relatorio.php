@@ -13,18 +13,16 @@
         <table border = "1" width = "100%">
             <tr>
                 <th> Nome da máquinas</th>
-                <th> Meta </th>
                 <th> Peças Produzidas </th>
                 <th> Peças Boas </th>
+                <th> refugo </th>
             </tr>
-        <?php foreach ($maquina_relatorio as $maq): ?>
                 <tr>
-                    <td> <?= $maquina_relatorio ['Nome']; ?> </td>
-                    <td> <?= $maquina_relatorio ['Peças_produzidas']; ?> </td>
-                    <td> <?= $maquina_relatorio ['Peças_Boas']; ?> </td>
-                    <td> <?= $maquina_relatorio ['Refugo'] ; ?> </td>
+                    <td> <?= $maquina; ?> </td>
+                    <td> <?= $pecas_produzidas ; ?> </td>
+                    <td> <?= $pecas_refugadas ;?> </td>
+                    <td> <?= $refugo ; ?> </td>
                 </tr>
-           <?php  endforeach ?>
         </table>
     </body>
 </html>
