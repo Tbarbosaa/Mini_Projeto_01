@@ -16,16 +16,16 @@
                 <br><br>
                 <label for = ""> Máquinas </label>
                 <select name = "maquinas">
-                    <option value = "maq_01"> Maquina 01 </option>
-                    <option value = "maq_02"> Maquina 02 </option>
-                    <option value = "maq_03"> Maquina 03 </option>
+                    <option value = "Maq-01"> Maquina 01 </option>
+                    <option value = "Maq-02"> Maquina 02 </option>
+                    <option value = "Maq-03"> Maquina 03 </option>
                 </select>
                 <br><br>
                 <input type="radio" name="turno" value="primeiro">
                 <label for="html">1º turno </label>
                 <input type="radio" name="turno" value="segundo">
                 <label for="html">2º turno </label>
-                <input type="radio" name="turno" value=terceiro">
+                <input type="radio" name="turno" value="terceiro">
                 <label for="html">3º turno </label>
                 <br><br>
                 <label for = ""> Peças Produzidas </label>
