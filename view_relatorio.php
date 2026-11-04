@@ -8,7 +8,7 @@
         <title>Relatório de Turno </title>
     </head>
     <body>
-        <h2> Relatório de Turno </h2>
+        <h2 class = "relatorio"> Relatório de Turno </h2>
         <p> Nome do operador : <?= $nome ?> </p>
         <p> Máquina utilizada : <?= $maquina ?> </p>
         <p> Turno : <?= $turnos [$turno] ?> </p>
@@ -33,8 +33,9 @@
                     <td> <?= $tempo_produtivo ?>% </td>
                 </tr>
         </table>
-        <p> <?= $get_refugo ?> </p>
-        <p> <?= $get_tempo ?> </p>
-        <p> <?= $get_meta ?> </p>
+        <h2> Mensagens e Avisos sobre a Produção  </h2> 
+        <p class = "txt-refugo"> <?= $get_refugo ?> </p>
+        <h4> <?= $get_tempo ?> </h4>
+        <h4> <?= $get_meta ?> </h4>
     </body>
 </html>

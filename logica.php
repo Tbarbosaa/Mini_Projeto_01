@@ -36,18 +36,18 @@ if ($meta_atingida > 100){
 
 // Regra de Refugo
 if ($refugo > 5){
-    $get_refugo =  "Atenção a qualidade está baixa! <br>";
+    $get_refugo =  "Atenção! O refugo ultrapassou o limite de 5%, a qualidade da produção precisa melhorar <br>";
 }
 else{
-    $get_refugo =  "A qualidade está dentro do padrão <br>";
+    $get_refugo =  "A qualidade da produção está dentro do padrão <br>";
 }
 
 // Máquina parada
 if ($tempo_produtivo <= 60){
-    $get_tempo = "Máquina necessita manutenção <br>";
+    $get_tempo = "A máquina necessita manutenção, ela esteve parada por muito tempo durante o turno <br>";
 }
 else {
-    $get_tempo = "Funcionamento padrão <br>"; 
+    $get_tempo = "A máquina operou no tempo padrão <br>"; 
 }
 
 // Meta alcançada
@@ -55,7 +55,7 @@ if ($pecas_boas >= $maquinas_metas [$maquina]){
     $get_meta = "A meta de peças foi atingida!! <br>";
 }
 else{
-    $get_meta = "A meta não foi atingida, falta de produção <br>";
+    $get_meta = "A meta não foi atingida, necessário o aumento de produção <br>";
 }
 
 // funções do sistema
@@ -65,10 +65,8 @@ function buscaMeta (){
 }
 
 function percentual (){
-    return "Percentual de meta: $get_meta, Percentual de refugo: $get_refugo , Percentual de tempo: $get_tempo";
+    return "Percentual de meta: {$get_meta} , Percentual de refugo: {$get_refugo} , Percentual de tempo: {$get_tempo}";
 }
-
-
 
 require "view_relatorio.php";
 ?>

@@ -37,7 +37,7 @@
                 <label for = ""> Minutos de Máquina Parada: </label>
                 <input type = "number" name = "minutos_parada" min = "0" max = "480">
                 <br><br>
-                <button type = "submit"> Registar </button>
+                <button class = "btn-registrar"type = "submit"> Registar </button>
                 <button class = "btn-voltar" type = "reset"> Limpar </button>
                 </form>
         </div>

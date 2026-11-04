@@ -1,4 +1,37 @@
-.tabela {
-    background-color: #dedede;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.relatorio {
     text-align: center;
+    color: #333333;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabela td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.tabela th {
+    background-color: #012F73;
+    color: white;
+}
+
+.txt-refugo{
+    color: #ae0d25;
+    font-size: 26px;
 }
