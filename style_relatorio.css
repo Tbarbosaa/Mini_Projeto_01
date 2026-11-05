@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
@@ -8,6 +8,10 @@ body {
 .relatorio {
     text-align: center;
     color: #333333;
+}
+
+.relat-turno{
+    font-size: 17px;
 }
 
 .tabela {
@@ -31,7 +35,34 @@ body {
     color: white;
 }
 
-.txt-refugo{
-    color: #ae0d25;
-    font-size: 26px;
+.txt-refugo {
+    color: #9c1c1c;
+    font-size: 18px;
+}
+
+.txt-tempo {
+    color: #a0a017;
+    font-size: 18px;
+}
+
+.txt-meta {
+    color: #008000;
+    font-size: 18px;
+}
+
+.avisos{
+    text-align: center;
+}
+
+.mensagens{
+    background-color: #ffffff;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.media{
+    font-size: 18px;
 }

@@ -12,16 +12,16 @@
                 <h2> Registro de Turno </h2>
                 <form action = "logica.php" method = "POST">
                 <label for = ""> Nome do Operador: </label>
-                <input type = "text" name = "nome"> 
+                <input class = "inputs" type = "text" name = "nome" required> 
                 <br><br>
                 <label for = ""> Máquinas </label>
-                <select name = "maquinas">
+                <select class = "inputs" name = "maquinas" required>
                     <option value = "Maq-01"> Maquina 01 </option>
                     <option value = "Maq-02"> Maquina 02 </option>
                     <option value = "Maq-03"> Maquina 03 </option>
                 </select>
                 <br><br>
-                <input type="radio" name="turno" value="primeiro">
+                <input type="radio" name="turno" value="primeiro" >
                 <label for="html">1º turno </label>
                 <input type="radio" name="turno" value="segundo">
                 <label for="html">2º turno </label>
@@ -29,13 +29,13 @@
                 <label for="html">3º turno </label>
                 <br><br>
                 <label for = ""> Peças Produzidas </label>
-                <input type = "number" name = "peças_produzidas" min = "0">
+                <input  class = "inputs" type = "number" name = "peças_produzidas" min = "0" required>
                 <br><br>
                 <label for = ""> Peças Refugadas </label>
-                <input type = "number" name = "peças_refugadas" min = "0">
+                <input class = "inputs" type = "number" name = "peças_refugadas" min = "0" required>
                 <br><br>
                 <label for = ""> Minutos de Máquina Parada: </label>
-                <input type = "number" name = "minutos_parada" min = "0" max = "480">
+                <input  class = "inputs"type = "number" name = "minutos_parada" min = "0" max = "480" required>
                 <br><br>
                 <button class = "btn-registrar"type = "submit"> Registar </button>
                 <button class = "btn-voltar" type = "reset"> Limpar </button>

@@ -9,10 +9,11 @@
     </head>
     <body>
         <h2 class = "relatorio"> Relatório de Turno </h2>
-        <p> Nome do operador : <?= $nome ?> </p>
-        <p> Máquina utilizada : <?= $maquina ?> </p>
-        <p> Turno : <?= $turnos [$turno] ?> </p>
-
+        <div class = "relat-turno">
+            <p> Nome do operador : <?= $nome ?> </p>
+            <p> Máquina utilizada : <?= $maquina ?> </p>
+            <p> Turno : <?= $turnos [$turno] ?> </p>
+        </div>
         <table border = "1" width = "100%" class = "tabela">
             <tr>
                 <th> Nome da máquina</th>
@@ -27,15 +28,20 @@
                     <td> <?= $maquina; ?> </td>
                     <td> <?= $pecas_produzidas ; ?> </td>
                     <td> <?= $pecas_boas ;?> </td>
-                    <td> <?= $refugo ; ?> </td>
+                    <td> <?= $refugo ; ?>%  </td>
                     <td> <?= $maquinas_metas [$maquina] ; ?> Peças </td>
                     <td> <?= $meta_atingida ?>% </td>
                     <td> <?= $tempo_produtivo ?>% </td>
                 </tr>
         </table>
-        <h2> Mensagens e Avisos sobre a Produção  </h2> 
-        <p class = "txt-refugo"> <?= $get_refugo ?> </p>
-        <h4> <?= $get_tempo ?> </h4>
-        <h4> <?= $get_meta ?> </h4>
+        <br><br>
+        <h2 class = "avisos">  Mensagens e Avisos sobre a Produção  </h2> 
+        <br>
+        <div class = "mensagens">
+            <p class = "media"> <?= calcularMediaPecas($pecas_boas, $total_horas = 8) ?> peças por hora </p>
+            <p class = "txt-refugo"> <?= $get_refugo ?> </p>
+            <p class = "txt-tempo"> <?= $get_tempo ?> </p>
+            <p class = "txt-meta"> <?= $get_meta ?> </p>
+        </div>
     </body>
 </html>
